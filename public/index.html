@@ -1,0 +1,357 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AURA — студія йоги в Києві. Хатха-йога, віньяса, пілатес та функціональні тренування. Запис на пробне заняття.">
+  <title>AURA — студія йоги</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="site-header" id="home">
+    <div class="container header-inner">
+      <a class="brand" href="#home">
+        <span>
+          <strong>AURA</strong>
+          <small>студія йоги та балансу</small>
+        </span>
+      </a>
+      <nav id="main-nav" aria-label="Головне меню">
+        <a href="#home">Головна</a>
+        <a href="#classes">Заняття</a>
+        <a href="#trainers">Тренери</a>
+        <a href="#booking">Запис</a>
+        <a href="#reviews">Відгуки</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button" id="theme-toggle" type="button"
+          aria-pressed="false" aria-label="Перемкнути на темну тему">
+          <span id="theme-toggle-icon" aria-hidden="true">☾</span>
+          <span id="theme-toggle-text">Темна</span>
+        </button>
+        <button class="icon-button menu-toggle" id="menu-toggle"
+          type="button" aria-expanded="false"
+          aria-controls="main-nav" aria-label="Відкрити меню">
+          <span class="burger" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">ЙОГА · РУХ · БАЛАНС</p>
+          <h1>Йога у своєму ритмі</h1>
+          <p class="hero-lead">
+            У студії AURA можна спробувати різні напрями
+            йоги та тренувань. Оберіть заняття,
+            яке вам підходить.
+          </p>
+          <a class="button" href="#booking">
+            Записатися на пробне <span>→</span>
+          </a>
+        </div>
+        <img class="hero-photo" src="images/hero.jpg"
+          alt="Заняття йогою у світлій студії серед рослин">
+      </div>
+    </section>
+
+    <section class="section classes-section" id="classes">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="classes-eyebrow">НАПРЯМИ ЗАНЯТЬ</p>
+            <h2>Наші заняття</h2>
+          </div>
+          <a href="#booking" class="text-link">Обрати заняття →</a>
+        </div>
+
+        <div class="class-grid">
+          <article class="class-card">
+            <div class="class-image">
+              <img src="images/hatha.jpg"
+                alt="Практика хатха-йоги у світлій студії">
+              <span>01</span>
+            </div>
+            <div class="class-copy">
+              <h3>Хатха-йога</h3>
+              <p>
+                Спокійний темп, базові пози та вправи
+                на гнучкість. Підійде для знайомства з йогою.
+              </p>
+              <div class="class-details" id="details-1" hidden>
+                <p><strong>Рівень:</strong> для початківців</p>
+                <p><strong>Тривалість:</strong> 60 хвилин</p>
+                <p><strong>Група:</strong> до 12 осіб</p>
+              </div>
+              <button class="details-button" type="button"
+                aria-expanded="false" aria-controls="details-1">
+                Детальніше
+              </button>
+            </div>
+          </article>
+
+          <article class="class-card">
+            <div class="class-image">
+              <img src="images/vinyasa.jpg"
+                alt="Виконання динамічної пози йоги">
+              <span>02</span>
+            </div>
+            <div class="class-copy">
+              <h3>Віньяса</h3>
+              <p>
+                Пози плавно змінюють одна одну.
+                Рухи виконуються в ритмі дихання.
+              </p>
+              <div class="class-details" id="details-2" hidden>
+                <p><strong>Рівень:</strong> середній</p>
+                <p><strong>Тривалість:</strong> 75 хвилин</p>
+                <p><strong>Група:</strong> до 10 осіб</p>
+              </div>
+              <button class="details-button" type="button"
+                aria-expanded="false" aria-controls="details-2">
+                Детальніше
+              </button>
+            </div>
+          </article>
+
+          <article class="class-card">
+            <div class="class-image">
+              <img src="images/pilates.jpg"
+                alt="Виконання вправи пілатесу на килимку">
+              <span>03</span>
+            </div>
+            <div class="class-copy">
+              <h3>Пілатес</h3>
+              <p>
+                Вправи для м'язів спини, живота
+                та контролю постави.
+                Основна увага — техніці рухів.
+              </p>
+              <div class="class-details" id="details-3" hidden>
+                <p><strong>Рівень:</strong> для всіх рівнів</p>
+                <p><strong>Тривалість:</strong> 55 хвилин</p>
+                <p><strong>Група:</strong> до 8 осіб</p>
+              </div>
+              <button class="details-button" type="button"
+                aria-expanded="false" aria-controls="details-3">
+                Детальніше
+              </button>
+            </div>
+          </article>
+
+          <article class="class-card">
+            <div class="class-image">
+              <img src="images/functional.jpg"
+                alt="Функціональне тренування з гирею">
+              <span>04</span>
+            </div>
+            <div class="class-copy">
+              <h3>Функціональний тренінг</h3>
+              <p>
+                Силові вправи та робота над витривалістю.
+                Навантаження можна підбирати
+                за рівнем підготовки.
+              </p>
+              <div class="class-details" id="details-4" hidden>
+                <p><strong>Рівень:</strong> від початкового до просунутого</p>
+                <p><strong>Тривалість:</strong> 60 хвилин</p>
+                <p><strong>Група:</strong> до 10 осіб</p>
+              </div>
+              <button class="details-button" type="button"
+                aria-expanded="false" aria-controls="details-4">
+                Детальніше
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section trainers-section" id="trainers">
+      <div class="container">
+        <div class="trainers-heading">
+          <div>
+            <p class="trainers-eyebrow">НАША КОМАНДА</p>
+            <h2>Наші тренери</h2>
+          </div>
+        </div>
+        <div class="trainer-grid">
+          <article class="trainer">
+            <img src="images/olena.jpg" alt="Тренерка Олена Коваль">
+            <div class="trainer-info">
+              <h3>Олена Коваль</h3>
+              <p class="specialty">Хатха-йога, йога для спини</p>
+              <p class="trainer-description">
+                На заняттях Олени увага приділяється
+                плавним рухам і поступовому зміцненню тіла.
+              </p>
+            </div>
+          </article>
+
+          <article class="trainer">
+            <img src="images/andrii.jpg" alt="Тренер Андрій Мельник">
+            <div class="trainer-info">
+              <h3>Андрій Мельник</h3>
+              <p class="specialty">Віньяса, пілатес</p>
+              <p class="trainer-description">
+                Проводить динамічні практики.
+                Особливу увагу приділяє правильній
+                та безпечній техніці.
+              </p>
+            </div>
+          </article>
+
+          <article class="trainer">
+            <img src="images/mariia.jpg" alt="Тренерка Марія Шевчук">
+            <div class="trainer-info">
+              <h3>Марія Шевчук</h3>
+              <p class="specialty">Функціональний тренінг</p>
+              <p class="trainer-description">
+                З Марією працюють над силою,
+                витривалістю та поставою.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="booking-section" id="booking">
+      <div class="booking-photo"></div>
+      <div class="container booking-layout">
+        <div class="booking-copy">
+          <h2>Запис на пробне заняття</h2>
+          <p>
+            Заповніть форму та вкажіть, яке заняття
+            вас цікавить. Ми зв'яжемося з вами,
+            щоб узгодити час.
+          </p>
+        </div>
+
+        <form class="booking-form" id="booking-form"
+          action="/api/messages" method="post" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="visitor-name">Ім'я <span>*</span></label>
+              <input id="visitor-name" name="name" type="text"
+                placeholder="Ваше ім'я" minlength="2"
+                autocomplete="name" required>
+              <p class="error-message" id="visitor-name-error"
+                role="alert"></p>
+            </div>
+
+            <div class="field">
+              <label for="visitor-email">Email <span>*</span></label>
+              <input id="visitor-email" name="email" type="email"
+                placeholder="example@email.com"
+                autocomplete="email" required>
+              <p class="error-message" id="visitor-email-error"
+                role="alert"></p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="visitor-message">
+              Повідомлення
+              <span class="optional">(необов'язково)</span>
+            </label>
+            <textarea id="visitor-message" name="message"
+              rows="3" maxlength="500"
+              placeholder="Бажаний напрям або зручний час"></textarea>
+            <p class="error-message" id="visitor-message-error"
+              role="alert"></p>
+          </div>
+
+          <button class="button" type="submit">Записатися</button>
+          <p class="form-success" id="form-success"
+            role="status" hidden></p>
+          <p class="error-message" id="form-error" role="alert"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section reviews-section" id="reviews">
+      <div class="container">
+        <div class="trainers-heading">
+          <div>
+            <p class="trainers-eyebrow">ВІДГУКИ</p>
+            <h2>Що кажуть учасники</h2>
+          </div>
+          <p class="reviews-count" id="reviews-count"
+            aria-live="polite"></p>
+        </div>
+
+        <div class="reviews-layout">
+          <div class="review-list" id="review-list"
+            aria-live="polite"></div>
+
+          <form class="review-form" id="review-form" novalidate>
+            <h3>Залишити відгук</h3>
+            <div class="field">
+              <label for="review-name">Ім'я <span>*</span></label>
+              <input id="review-name" name="reviewName" type="text"
+                placeholder="Ваше ім'я" minlength="2"
+                maxlength="40" required>
+              <p class="error-message" id="review-name-error"
+                role="alert"></p>
+            </div>
+
+            <div class="field">
+              <label for="review-text">Відгук <span>*</span></label>
+              <textarea id="review-text" name="reviewText"
+                rows="3" minlength="10" maxlength="300"
+                placeholder="Поділіться враженнями від занять"
+                required></textarea>
+              <p class="error-message" id="review-text-error"
+                role="alert"></p>
+            </div>
+
+            <button class="button" type="submit">
+              Додати відгук
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div>
+          <strong>AURA</strong>
+          <small>студія йоги та балансу</small>
+        </div>
+      </div>
+
+      <div class="footer-contact">
+        <h2>Контакти</h2>
+        <p>бульвар Академіка Вернадського, 16В, Київ</p>
+        <p>
+          <a href="tel:+380671234567">
+            +38 (067) 123-45-67
+          </a>
+        </p>
+        <p>
+          <a href="mailto:natalyakorostelyova@e-u.edu.ua">
+            natalyakorostelyova@e-u.edu.ua
+          </a>
+        </p>
+      </div>
+
+      <div class="footer-social">
+        <h2>Про студію</h2>
+        <p></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

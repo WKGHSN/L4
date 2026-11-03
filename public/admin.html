@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AURA — повідомлення</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/">
+        <span>
+          <strong>AURA</strong>
+          <small>студія йоги та балансу</small>
+        </span>
+      </a>
+
+      <div class="header-actions">
+        <a class="icon-button" href="/">На сайт</a>
+        <button class="icon-button" id="logout-button" type="button" hidden>
+          Вийти
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="section admin-main">
+    <div class="container">
+
+      <section class="admin-card" id="login-panel" hidden>
+        <h1>Вхід для адміністратора</h1>
+
+        <form id="login-form" novalidate>
+          <div class="field">
+            <label for="login-username">Логін</label>
+            <input id="login-username" name="username" type="text"
+              autocomplete="username" required>
+          </div>
+
+          <div class="field">
+            <label for="login-password">Пароль</label>
+            <input id="login-password" name="password" type="password"
+              autocomplete="current-password" required>
+          </div>
+
+          <p class="error-message" id="login-error" role="alert"></p>
+
+          <button class="button" type="submit">Увійти</button>
+        </form>
+      </section>
+
+      <section id="messages-panel" hidden>
+        <div class="admin-toolbar">
+          <div>
+            <p class="trainers-eyebrow">АДМІНІСТРУВАННЯ</p>
+            <h1>Повідомлення з форми</h1>
+          </div>
+          <p class="admin-count" id="messages-count" aria-live="polite"></p>
+        </div>
+
+        <p class="error-message" id="messages-error" role="alert"></p>
+
+        <div class="message-list" id="messages-list"></div>
+
+        <p class="review-empty" id="messages-empty" hidden>
+          Повідомлень поки немає.
+        </p>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>
