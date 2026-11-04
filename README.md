@@ -17,7 +17,7 @@ Node.js + Express + SQLite. Форма запису надсилається н�
 
        PORT=3000
        ADMIN_USER=admin
-       ADMIN_PASSWORD=ваш_надійний_пароль
+       ADMIN_PASSWORD=
 
 4. Запустіть сервер:
 
