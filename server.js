@@ -1,5 +1,6 @@
 require("dotenv").config();
 
+const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
 const express = require("express");
@@ -24,6 +25,21 @@ const LOGIN_WINDOW_MS = 15 * 60 * 1000;
 
 const sessions = new Map();
 const failedLogins = new Map();
+
+const logDir = path.join(__dirname, "logs");
+fs.mkdirSync(logDir, { recursive: true });
+
+function logError(err) {
+  const line =
+    "[" +
+    new Date().toISOString() +
+    "] " +
+    (err && err.stack ? err.stack : err) +
+    "\n";
+
+  console.error(line.trim());
+  fs.appendFile(path.join(logDir, "error.log"), line, function () {});
+}
 
 function digest(value) {
   return crypto.createHash("sha256").update(String(value)).digest();
@@ -132,10 +148,15 @@ function validateMessage(body) {
 
 const app = express();
 
+app.set("trust proxy", 1);
 app.disable("x-powered-by");
 app.use(express.json({ limit: "10kb" }));
 app.use(express.urlencoded({ extended: false, limit: "10kb" }));
 app.use(express.static(path.join(__dirname, "public")));
+
+app.get("/health", function (req, res) {
+  res.json({ status: "ok" });
+});
 
 app.post("/api/messages", function (req, res) {
   const result = validateMessage(req.body);
@@ -222,7 +243,7 @@ app.use(function (err, req, res, next) {
     return res.status(400).json({ error: "Некоректні дані запиту." });
   }
 
-  console.error(err);
+  logError(err);
   res.status(500).json({ error: "Внутрішня помилка сервера." });
 });
 
