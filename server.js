@@ -154,6 +154,10 @@ app.use(express.json({ limit: "10kb" }));
 app.use(express.urlencoded({ extended: false, limit: "10kb" }));
 app.use(express.static(path.join(__dirname, "public")));
 
+app.get("/favicon.ico", function (req, res) {
+  res.status(204).end();
+});
+
 app.get("/health", function (req, res) {
   res.json({ status: "ok" });
 });
